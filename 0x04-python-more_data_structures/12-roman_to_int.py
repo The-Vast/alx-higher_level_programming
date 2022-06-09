@@ -2,7 +2,6 @@
 def roman_to_int(roman_string):
     """that converts a Roman numeral to an integer."""
     if isinstance(roman_string, str) or roman_string != None:
-        major = [["I", 1], ["V", 5], ["X", 10], ["L", 50], ["C", 100], ["D", 500], ["M", 1000]]
         main = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
         integer = main[roman_string[0]]
         if len(roman_string) == 1:
