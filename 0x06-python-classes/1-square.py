@@ -4,6 +4,8 @@
     Instantiation with size (no type/value verification).
     You are not allowed to import any module.
 """
+
+
 class Square:
     """This is the Square."""
 
@@ -11,4 +13,4 @@ class Square:
         """Initialize the square
         Args:                                                                                                                                                size (int): The size of a square.                                                                                                      
         """
-        self.size = __size
+        self.__size = size
