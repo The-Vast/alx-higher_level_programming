@@ -6,7 +6,7 @@ How to Use 2-matrix_divided.py
 
 This module defines a matrix division function ``matrix_divided(matrix, div)``.
 
-Usage (Valid matrices)
+Usage (Valid arguments)
 =====================
 
 ``matrix_divided(...)`` returns a new matrix that is a copy of the parameter
@@ -165,3 +165,14 @@ is raised.
     >>> print(matrix_divided(matrix, 0))
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
+
+Invalid arguments
+=================
+matrix must be a list of lists of integers or floats and,
+div must be a number (integer or float)
+
+::
+
+    >>> print(matrix_divided(0, 0))
+    Traceback (most recent call last):
+    Exception:
