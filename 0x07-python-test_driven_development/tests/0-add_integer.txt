@@ -10,12 +10,12 @@ This library is very simple, since it only has one function called
 Usage with Numbers
 =================
 
-``add_integer()`` returns the sum of its arguments.  For numbers,
+``add_integer(...)`` returns the sum of its arguments.  For numbers,
 that value is equivalent to using the ``+`` operator.
 
 ::
 
-    >>> from 0-add_integer import add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
     >>> add_integer(2, 3)
     5
 
@@ -27,6 +27,7 @@ that value is equivalent to using the ``+`` operator.
 ::
 
     >>> add_integer(-100, 23)
+    -77
 
 It also works with floating-point values.
 
@@ -66,31 +67,31 @@ if either of the argument is not float or integer, a TypeError is raised.:
 ::
 
     >>> add_integer('a', 3)
-    Traceback (most recent last call):
+    Traceback (most recent call last):
     TypeError: a must be an integer
 
 ::
 
     >>> add_integer(['A', 'B', 'C'], 2)
-    Traceback (most recent last call):
+    Traceback (most recent call last):
     TypeError: a must be an integer
 
 ::
 
     >>> add_integer(4, '10')
-    Traceback (most recent last call):
+    Traceback (most recent call last):
     TypeError: b must be an integer
 
 ::
 
-    >>> add_integer(Null)
-    Traceback (most recent last call):
+    >>> add_integer(None)
+    Traceback (most recent call last):
     TypeError: a must be an integer
 
 ::
 
     >>> add_integer(6, None)
-    Traceback (most recent last call):
+    Traceback (most recent call last):
     TypeError: b must be an integer
 
 If both arguments are non-integers and non-floats, a TypeError message is only
