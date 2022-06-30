@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""How many instances"""
+"""Change representation"""
 
 
 class Rectangle:
