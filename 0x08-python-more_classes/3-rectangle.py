@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-"""Real definition of a rectangle"""
+"""String representation"""
 
 
 class Rectangle:
@@ -10,7 +9,7 @@ class Rectangle:
 
         Args:
             width (int): how wide the new rectangle is
-            height (int): how long the nedw rectangle is
+            height: how long the nedw rectangle is
         """
         self.width = width
         self.height = height
@@ -42,3 +41,29 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """return the area of the rectangle"""
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        """return the perimeter of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
+
+    def __str__(self):
+        """Return string representation of the Rectangle
+
+        Represents rectangle with the character #
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        shape = []
+        for i in range(self.__height):
+            [shape.append('#') for j in self.__width]
+            if i != self.__height - 1:
+                shape.append('\n')
+
+        return ("".join(shape))
