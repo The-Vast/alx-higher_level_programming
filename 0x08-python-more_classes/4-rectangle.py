@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""String representation"""
+"""Eval is magic"""
 
 
 class Rectangle:
@@ -67,3 +67,8 @@ class Rectangle:
                 shape.append('\n')
 
         return ("".join(shape))
+
+    def __repr__(self):
+        """return a string representation of the rectangle"""
+        op = "Rectangle(" + str(self.__width) + ", " + str(self.__height) + ")"
+        return (op)
