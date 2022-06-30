@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Change representation"""
+"""Compare rectangles"""
 
 
 class Rectangle:
@@ -66,9 +66,10 @@ class Rectangle:
 
         shape = []
         for i in range(self.__height):
-            [shape.append(str(self.print_symbol)) for j in range(self.__width)]
+            [shape.append(self.print_symbol) for j in range(self.__width)]
             if i != self.__height - 1:
                 shape.append('\n')
+
         return ("".join(shape))
 
     def __repr__(self):
@@ -80,3 +81,21 @@ class Rectangle:
         """message to be printed when an instance is deleted"""
         print("Bye rectangle...")
         type(self).number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """returns the biggest rectangle based on the area
+
+        Args:
+            rect_1 (Rectangle): first rectangle instance
+            rect_2 (Rectangle): second rectangle instance
+
+        Returns: rectangle with bigger area
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
