@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 
 """Square #1"""
 Rectangle = __import__('9-rectangle.py').Rectangle
@@ -7,7 +7,7 @@ Rectangle = __import__('9-rectangle.py').Rectangle
 class Square(Rectangle):
     """inherits from Rectangle"""
     def __init__(self, size):
-        """instantiation of Square
+        """instializes a new Square
 
         Args:
             size (int): size of the square side
