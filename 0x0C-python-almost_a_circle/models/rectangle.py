@@ -6,7 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """inherits from Base"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Instantiation of the Rectangle object""" 
+        """Instantiation of the Rectangle object"""
         self.width = width
         self.height = height
         self.x = x
@@ -17,7 +17,7 @@ class Rectangle(Base):
     def width(self):
         """get the width of the Rectangle"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """set the width of the Rectangle"""
@@ -69,7 +69,7 @@ class Rectangle(Base):
     def area(self):
         """returns area of rectangle"""
         return self.width * self.height
-    
+
     def display(self):
         """Print the Rectangle using the `#` character."""
         if self.width == 0 or self.height == 0:
